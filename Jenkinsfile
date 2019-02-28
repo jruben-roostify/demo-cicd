@@ -16,6 +16,7 @@ pipeline {
         branch 'master'
       }
       steps {
+        sh '`git describe --tags --abbrev=0 | awk -F. \'{$NF+=1; OFS="."; print $0}\'`'
         sh 'NEW_VERSION=`git describe --tags --abbrev=0 | awk -F. \'{$NF+=1; OFS="."; print $0}\'`'
         sh 'echo new version $NEW_VERSION'
         sh 'git tag -a $NEW_VERSION -m "new release"'
