@@ -12,3 +12,5 @@ Adding a new test to see what happens
 Adding a new feature test-123
 
 Adding a new Hotfix test-123
+
+Adding a new feature feature/FET-124
