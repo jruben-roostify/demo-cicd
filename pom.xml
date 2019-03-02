@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.john.example</groupId>
 	<artifactId>demo-cicd</artifactId>
-	<version>1.0.3-FET-124-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<name>demo-cicd</name>
 	<description>Demo project for Spring Boot</description>
 
