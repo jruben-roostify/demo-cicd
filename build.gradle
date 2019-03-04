@@ -1,8 +1,19 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+
+	dependencies {
+		classpath 'io.github.robwin:jgitflow-gradle-plugin:0.6.0'
+	}
+}
+
 plugins {
 	id "maven"
 	id "java"
-	id "com.limark.gitflowsemver" version "0.3.0"
 }
+
+apply plugin: 'io.github.robwin.jgitflow'
 
 group = 'com.john.example'
 version = '0.0.1-SNAPSHOT'
@@ -14,13 +25,6 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
-}
-
-versionConfig {
-	alphaLabel = "pre"
-	rcLabel = "beta"
-	gitDescribeMatchRule = "*[0-9].[0-9]*.[0-9]*"
-	//propertiesFile = "${project.buildDir}/META-INF/version.properties"
 }
 
 repositories {
